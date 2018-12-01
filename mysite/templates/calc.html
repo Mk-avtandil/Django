@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load my_filters i18n %}
+
+{% block content %}
+    {% show_navbar 'index' %}
+    <div class="calcul">
+            <h3 class="text-center text-danger">Калькулятор может считать расход бензина</h3>
+            <p class="text-light">калькулятор может считать расход бензина</p>
+            <form action="#" class="form">
+              <p>Расход топливо автомобиля
+                <input class="form-control mt-3" type="text" id="n1" placeholder="10">
+              </p>
+              <p>
+                Расстояние поездки
+                <input class="form-control mt-3" type="text" id="n2" placeholder="1000км">
+              </p>
+              <p>
+                Стоимость топливо
+                <input class="form-control mt-3" type="text" id="n3" placeholder="40 сом">
+              </p>
+              <hr class="bg-danger">
+              <p>
+                Расход топливо составит
+                <p id="out1"></p>
+              </p>
+              <p>
+                Общая стоимость
+                <p id="out2"></p>
+              </p>
+              <button class="btn" onclick="calc()">Вычислить</button>
+            </form>
+          </div>
+    {% show_footer 'index' %}
+{% endblock %}

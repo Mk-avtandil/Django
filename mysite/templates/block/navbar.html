@@ -1,0 +1,40 @@
+{% load i18n my_filters %}
+<div class="just_block" id="link_img"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="link_img">
+  		<div class="container">
+  			<a class="navbar-brand" href="#">
+  			    		<img src="../static/img/logo.png" width="30" height="30" alt="">
+  			</a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  			   		<span class="navbar-toggler-icon"></span>
+  			</button>
+  			
+  					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+  					  	<ul class="navbar-nav nav">
+  					  		<li class="nav-item">
+  					    		<a class="nav-link active" href="/">{% trans 'Главная' %}</a>
+  					  		</li>
+  					  		<li class="nav-item">
+  					   			<a class="nav-link" href="{% url 'top' %}">Топ</a>
+  					 		</li>
+  					 		<li class="nav-item dropdown">
+  			        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			          			{% trans 'История' %}
+  			        			</a>
+  			        			<div class="dropdown-menu mt-2 bg-dark" aria-labelledby="navbarDropdown">
+  			          				<a class="dropdown-item text-info" href="#">Mercedes</a>
+  			          				<a class="dropdown-item text-info" href="#">Bmw</a>
+  			          				<a class="dropdown-item text-info" href="#">Audi</a>
+  			          				<a class="dropdown-item text-info" href="#">Toyota</a>
+  			        			</div>
+  			      			</li>
+  			      			<li class="nav-item">
+  					    		<a class="nav-link" href="{% url 'calc' %}">{% trans 'Калькулятор' %}</a>
+  					  		</li>
+  					  		<li class="nav-item">
+  					    		<a class="nav-link" href="#contact">{% trans 'Контакты' %}</a>
+  					  		</li>
+  						</ul>
+  				  </div>
+  		</div>
+	</nav>
